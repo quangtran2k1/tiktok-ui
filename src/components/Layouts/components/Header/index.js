@@ -1,15 +1,8 @@
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
-import {
-    SearchOutlined,
-    LoadingOutlined,
-    CloseCircleFilled,
-    SendOutlined,
-    CloudUploadOutlined,
-} from '@ant-design/icons';
-import Tippy from '@tippyjs/react';
-import 'tippy.js/dist/tippy.css';
+import { SearchOutlined, LoadingOutlined, CloseCircleFilled } from '@ant-design/icons';
+import Button from '~/components/Button';
 
 const cx = classNames.bind(styles);
 
@@ -33,16 +26,7 @@ function Header() {
                     </button>
                 </div>
                 <div className={cx('action')}>
-                    <Tippy content="Tải lên">
-                        <button className={cx('upload-btn')}>
-                            <CloudUploadOutlined />
-                        </button>
-                    </Tippy>
-                    <Tippy content="Tin nhắn">
-                        <button className={cx('message-btn')}>
-                            <SendOutlined />
-                        </button>
-                    </Tippy>
+                    <Button primary>Login</Button>
                 </div>
             </div>
         </header>
